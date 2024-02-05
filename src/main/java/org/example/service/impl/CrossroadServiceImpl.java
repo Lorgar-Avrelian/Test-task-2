@@ -1,6 +1,6 @@
 package org.example.service.impl;
 
-import org.example.crossroad_factory.constants.Timeout;
+import org.example.constants.Timeout;
 import org.example.model.CrossroadCondition;
 import org.example.model.Message;
 import org.example.model.TrafficLight;

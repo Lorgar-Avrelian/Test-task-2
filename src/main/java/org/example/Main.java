@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.crossroad_factory.CrossroadFactory;
-import org.example.crossroad_factory.constants.Timeout;
+import org.example.constants.Timeout;
 import org.example.crossroad_factory.impl.CrossroadFactoryImpl;
 import org.example.model.CrossroadCondition;
 import org.example.model.Message;
