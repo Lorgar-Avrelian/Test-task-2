@@ -5,5 +5,6 @@ import org.example.crossroad_factory.impl.PedestrianTrafficLights;
 
 public interface CrossroadFactory {
     CarTrafficLights getCarTrafficLights();
+
     PedestrianTrafficLights getPedestrianTrafficLights();
 }

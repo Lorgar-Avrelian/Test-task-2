@@ -73,4 +73,22 @@ public class TrafficLight {
                 ", count=" + count +
                 '}';
     }
+
+    public void sendMessage(Message message, long timeout) {
+        Thread thread = new Thread(() -> {
+            addMessage(message);
+        });
+        try {
+            thread.sleep(timeout);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        thread.start();
+    }
+
+    private void addMessage(Message message) {
+        Queue<Message> messages = getMessages();
+        messages.add(message);
+        setMessages(messages);
+    }
 }

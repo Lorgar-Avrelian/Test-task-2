@@ -1,9 +1,9 @@
 package org.example.crossroad_factory.impl;
 
 import org.example.crossroad_factory.TrafficLights;
-import org.example.model.TrafficLightColor;
 import org.example.model.Message;
 import org.example.model.TrafficLight;
+import org.example.model.TrafficLightColor;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
