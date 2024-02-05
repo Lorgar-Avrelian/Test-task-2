@@ -2,6 +2,8 @@ package org.example.model;
 
 import java.util.Objects;
 import java.util.Queue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class TrafficLight {
     private int id;
@@ -75,6 +77,7 @@ public class TrafficLight {
     }
 
     public void sendMessage(Message message, long timeout) {
+        ExecutorService service = Executors.newFixedThreadPool(12);
         Thread thread = new Thread(() -> {
             addMessage(message);
         });
@@ -83,6 +86,7 @@ public class TrafficLight {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+        service.submit(thread);
         thread.start();
     }
 
